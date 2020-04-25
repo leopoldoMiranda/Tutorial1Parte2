@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color='dark'>
+    <ion-title class="ion-text-center">
+      Movie DataBase
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="dark">
+    <ion-searchbar [(ngModel)]="movieTitle"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light" (click)="searchMovie()">
+        <ion-icon name="search-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="dark">
+<ion-card>
+  
+    <ion-img [src]="mov.imageUrl"></ion-img>
+
+  
+  <ion-card-header>
+    <ion-card-title>{{mov.title}}</ion-card-title>
+    <ion-card-subtitle>Year: {{mov.year}} - Rated: {{mov.rated}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card-content>
+    <b>Description:</b> {{mov.description}}
+  </ion-card-content>
+</ion-card>
+
+ 
+</ion-content>
